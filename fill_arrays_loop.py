@@ -1,5 +1,5 @@
 from numpy import sqrt ,exp, pi
-from matplotlib.pyplot import plot, show, xlabel, ylabel
+from matplotlib.pyplot import plot, show, xlabel, ylabel, linspace, zeros
 
 
 
@@ -7,8 +7,13 @@ def h(x):
     return 1 / sqrt(2 * pi) * exp(-0.5 * x * x)
 
 
-    n = 41
-dx = 8. / (n - 1)
+xlist = linspace(-4, 4, 41)
+hlist = zeros(len(xlist))
 
-xlist = [-4 + i * dx for i in range(n)]
-hlist = [h(x) for x in xlist]
+for i in range(len(xlist)):
+    hlist[i] = h(xlist[i])
+
+plot(xlist, hlist)
+xlabel('x')
+ylabel('h')
+show()
