@@ -1,5 +1,5 @@
-from numpy import sqrt ,exp, pi
-from matplotlib.pyplot import plot, show, xlabel, ylabel, linspace, zeros
+from numpy import sqrt ,exp, pi,linspace,zeros
+from matplotlib.pyplot import plot, show, xlabel, ylabel
 
 
 
